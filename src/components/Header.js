@@ -49,7 +49,7 @@ const Header = () => {
             Programs
           </Link>
           <Link
-            to="/donors"
+            to="/donor"
             className="text-white hover:text-green-300 transition duration-300"
           >
             Donors

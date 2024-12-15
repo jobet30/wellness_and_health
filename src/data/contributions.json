@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Children Educated",
+    "value": "12,345",
+    "description": "Thanks to your donations, thousands of children now have access to quality education.",
+    "icon": "📚"
+  },
+  {
+    "title": "Meals Provided",
+    "value": "98,765",
+    "description": "Your contributions have helped feed families in need with nutritious meals.",
+    "icon": "🍽️"
+  },
+  {
+    "title": "Medical Treatments",
+    "value": "8,123",
+    "description": "Lives saved through essential health services and treatments funded by donors.",
+    "icon": "⚕️"
+  }
+]

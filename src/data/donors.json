@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Jane Doe",
+    "description": "A kind-hearted donor who supports education programs."
+  },
+  {
+    "id": "2",
+    "name": "John Smith",
+    "description": "Dedicated to improving child healthcare and welfare."
+  },
+  {
+    "id": "3",
+    "name": "Global Charity Organization",
+    "description": "Committed to providing resources for community development."
+  }
+]
