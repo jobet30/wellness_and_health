@@ -65,9 +65,11 @@ const ProgramFilter = ({ programs, onFilter }) => {
   };
 
   return (
-    <div className="program-filter-container flex flex-col items-center w-full mb-8 mt-16 sm:mt-20">
-      <h3 className="text-2xl font-semibold mb-4">Filter Programs</h3>
-      <div className="flex flex-col sm:flex-row sm:space-x-4 w-full">
+    <div className="program-filter-container flex flex-col items-center justify-center w-full mb-8 mt-16 sm:mt-20">
+      <h3 className="text-2xl font-semibold mb-4 text-center">
+        Filter Programs
+      </h3>
+      <div className="flex flex-col sm:flex-row sm:space-x-4 w-full justify-center">
         <div className="search-container mb-4 sm:mb-0 w-full sm:w-1/2">
           <label htmlFor="search" className="block text-lg font-medium mb-2">
             Search Programs
@@ -101,7 +103,7 @@ const ProgramFilter = ({ programs, onFilter }) => {
         </div>
       </div>
 
-      <div className="mt-4 text-lg text-gray-600">
+      <div className="mt-4 text-lg text-gray-600 text-center">
         {filteredPrograms.length} programs found
       </div>
     </div>
