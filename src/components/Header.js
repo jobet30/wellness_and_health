@@ -1,19 +1,21 @@
 /**
  * @author: Jobet P. Casquejo
- * @description: A responsive header component with a transparent background.
- * It includes a logo, navigation links, and a mobile menu toggle. The header is sticky and appears at the top of the page.
- * TailwindCSS is used for styling, and the component is fully responsive.
+ * @description: A responsive header component with a background color that matches the theme.
+ * It includes a logo, navigation links, a mobile menu toggle, a Donate Now button, and a search input field with a magnifying glass icon.
+ * The header is sticky and appears at the top of the page. TailwindCSS is used for styling, and the component is fully responsive.
  * @dateCreated: 2024-12-15
  * Version: 1.0.0
- * LIcense: MIT
+ * License: MIT
  */
 
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { FiSearch } from "react-icons/fi";
 
 /**
  * Header component that renders the navigation menu with mobile responsiveness,
- * a transparent background, and sticky positioning.
+ * a background color, sticky positioning, a Donate Now button that redirects to a specific form,
+ * and a search input with a magnifying glass icon.
  *
  * @component
  * @example
@@ -22,31 +24,19 @@ import { Link } from "gatsby";
  * )
  */
 const Header = () => {
-  /**
-   * State to toggle the visibility of the mobile navigation menu.
-   *
-   * @type {boolean}
-   */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  /**
-   * Toggles the mobile menu state when the hamburger icon is clicked.
-   *
-   * @function
-   * @example
-   * handleMenuToggle();
-   */
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggles the mobile menu state
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="bg-transparent fixed top-0 left-0 right-0 z-50 shadow-md">
+    <header className="bg-green-700 fixed top-0 left-0 right-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
         {/* Logo Section */}
-        <div className="text-xl font-bold text-gray-800">
-          <Link to="/" className="hover:text-green-600 transition duration-300">
-            Wellness & Education
+        <div className="text-xl font-bold text-white">
+          <Link to="/" className="hover:text-green-300 transition duration-300">
+            Nurture Future Foundation
           </Link>
         </div>
 
@@ -54,49 +44,73 @@ const Header = () => {
         <nav className="hidden md:flex space-x-8">
           <Link
             to="/programs"
-            className="text-gray-600 hover:text-green-600 transition duration-300"
+            className="text-white hover:text-green-300 transition duration-300"
           >
             Programs
           </Link>
           <Link
             to="/donors"
-            className="text-gray-600 hover:text-green-600 transition duration-300"
+            className="text-white hover:text-green-300 transition duration-300"
           >
             Donors
           </Link>
           <Link
             to="/children"
-            className="text-gray-600 hover:text-green-600 transition duration-300"
+            className="text-white hover:text-green-300 transition duration-300"
           >
             Children
           </Link>
           <Link
             to="/caseworkers"
-            className="text-gray-600 hover:text-green-600 transition duration-300"
+            className="text-white hover:text-green-300 transition duration-300"
           >
             Caseworkers
           </Link>
         </nav>
 
+        {/* Desktop Search and Donate Now */}
+        <div className="hidden md:flex items-center space-x-4">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search programs..."
+              className="w-48 pl-10 p-2 border rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <FiSearch
+              className="absolute left-3 top-2 text-gray-500"
+              size={20}
+            />
+          </div>
+          <a
+            href="/donation-form"
+            className="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300"
+          >
+            Donate Now
+          </a>
+        </div>
+
         {/* Mobile Menu Toggle Button */}
         <div className="md:hidden flex items-center space-x-4">
-          <input
-            type="text"
-            placeholder="Search programs..."
-            className="w-48 p-2 border rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search programs..."
+              className="w-48 pl-10 p-2 border rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <FiSearch
+              className="absolute left-3 top-2 text-gray-500"
+              size={20}
+            />
+          </div>
           <button className="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300">
             Donate Now
           </button>
 
           {/* Hamburger Icon for Mobile Menu */}
-          <button
-            onClick={handleMenuToggle}
-            className="space-y-2 text-gray-800"
-          >
-            <div className="h-0.5 w-8 bg-gray-800"></div>
-            <div className="h-0.5 w-8 bg-gray-800"></div>
-            <div className="h-0.5 w-8 bg-gray-800"></div>
+          <button onClick={handleMenuToggle} className="space-y-2 text-white">
+            <div className="h-0.5 w-8 bg-white"></div>
+            <div className="h-0.5 w-8 bg-white"></div>
+            <div className="h-0.5 w-8 bg-white"></div>
           </button>
         </div>
       </div>
