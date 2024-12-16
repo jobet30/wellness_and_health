@@ -10,7 +10,6 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import ContributionHighlights from "../components/ContributionHighlights";
 import DonorTestimonials from "../components/DonorTestimonials";
-import Footer from "../components/Footer";
 
 /**
  * DonorPage component that showcases donor contributions, donor recognition, and testimonials.
@@ -115,7 +114,6 @@ const DonorPage = () => {
           Donate Now
         </a>
       </section>
-      <Footer />
     </Layout>
   );
 };

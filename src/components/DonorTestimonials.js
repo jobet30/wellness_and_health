@@ -7,6 +7,12 @@
  */
 
 import React, { useState, useEffect } from "react";
+import JohnDoe from "../images/john-doe.jpg";
+import JaneSmith from "../images/jane-smith.jpg";
+import MarkJohnson from "../images/mark-johnson.jpg";
+import EmilyTaylor from "../images/emily-taylor.jpg";
+import DavidLee from "../images/david-lee.jpg";
+import SarahWilson from "../images/sarah-wilson.jpg";
 
 /**
  * DonorTestimonials component to display feedback and testimonials from donors.
@@ -25,36 +31,42 @@ const DonorTestimonials = () => {
           name: "John Doe",
           testimonial:
             "It’s been incredibly rewarding to contribute to education initiatives. Seeing the children’s lives transform through the opportunities provided has been the highlight of my philanthropic journey.",
+          image: JohnDoe,
         },
         {
           id: "2",
           name: "Jane Smith",
           testimonial:
             "I’ve always believed in the power of education, and through my donations, I’ve been able to directly support scholarships for deserving students in remote areas.",
+          image: JaneSmith,
         },
         {
           id: "3",
           name: "Mark Johnson",
           testimonial:
             "Supporting healthcare initiatives for senior citizens has been a fulfilling experience. Knowing that I’m making a difference in the lives of the elderly gives me a great sense of purpose.",
+          image: MarkJohnson,
         },
         {
           id: "4",
           name: "Emily Taylor",
           testimonial:
             "My contributions towards environmental sustainability have been a journey of growth. I’m proud to support the preservation of wildlife and the protection of our planet.",
+          image: EmilyTaylor,
         },
         {
           id: "5",
           name: "David Lee",
           testimonial:
             "I’ve been a passionate supporter of community health initiatives. Seeing the positive impact of my donations on the lives of those in need has been a privilege.",
+          image: DavidLee,
         },
         {
           id: "6",
           name: "Sarah Wilson",
           testimonial:
             "I’ve been a lifelong supporter of education initiatives. Seeing the positive impact of my donations on the lives of students has been a privilege.",
+          image: SarahWilson,
         },
       ];
 

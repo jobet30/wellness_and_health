@@ -1,18 +1,22 @@
 /**
- * @author: Jobet P. Casquejo
- * @description: Layout component to provide a consistent structure across all pages.
- * Includes a shared Header and a content area for page-specific content.
+ * @author:
+ * Jobet P. Casquejo
+ * @description:
+ * Layout component to provide a consistent structure across all pages.
+ * Includes a shared Header, Footer, and a content area for page-specific content.
  * Date: 2024-12-15
  * @version: 1.0.0
  * @license: MIT
  */
+
 import React from "react";
 import PropTypes from "prop-types";
 import Header from "./Header";
+import Footer from "./Footer"; // Import Footer
 
 /**
  * Layout component to provide a consistent structure across all pages.
- * Includes a shared Header and a content area for page-specific content.
+ * Includes a shared Header, Footer, and a content area for page-specific content.
  *
  * @component
  * @example
@@ -25,16 +29,14 @@ import Header from "./Header";
  *
  * @param {Object} props - React props
  * @param {React.ReactNode} props.children - The page-specific content to render inside the layout.
- * @returns {JSX.Element} The Layout component with a Header and content area.
+ * @returns {JSX.Element} The Layout component with a Header, content area, and Footer.
  */
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
-      {/* Shared Header */}
+    <div className="layout flex flex-col min-h-screen">
       <Header />
-
-      {/* Page-Specific Content */}
-      <main className="content px-6 py-12">{children}</main>
+      <main className="content px-6 py-12 flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 };
